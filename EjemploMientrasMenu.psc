@@ -22,6 +22,13 @@ Algoritmo sin_titulo
 			Escribir "Presione cualquier tecla para continuar"
 			Esperar Tecla
 		FinSi
+		si opcion = 3 Entonces
+			Escribir "Como esta usuario?, cual es su nombre"
+			Leer nombre
+			Escribir "Gracias!, ", nombre
+			Escribir "Presione cualquier tecla para continuar"
+			Esperar Tecla
+		FinSi
 	FinMientras
 	Escribir "Aplicación cerrada"
 	
