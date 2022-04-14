@@ -1,0 +1,10 @@
+print("====**** Registro de datos ****====")
+nombre = input("Ingrese su nombre: ")
+rut = input("Ingrese su rut: ")
+correo = input("Ingrese su correo: ")
+fono = input("Ingrese su fono: ")
+
+print(f"NOMBRE  : {nombre.upper()}")
+print(f"RUT     : {rut.upper()}")
+print(f"CORREO  : {correo.upper()}")
+print(f"FONO    : {fono.upper()}")
