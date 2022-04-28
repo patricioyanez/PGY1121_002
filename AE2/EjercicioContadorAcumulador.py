@@ -31,3 +31,5 @@ else:
 # 4.- Mostrar los resultados
 print("La suma de los numero es     :", acumulador)
 print("La cuenta de los numeros es  :", contador)
+###  Realizar los demás ejercicios de la ppt como tarea
+## inscibirse a el curso de cisco :)
