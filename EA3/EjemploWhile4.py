@@ -9,7 +9,10 @@ while opcion != 6:
     print("4.- Pan Integral")
     print("5.- Total de compra")
     print("6.- Salir")
-    opcion = int(input("Ingrese una opción:"))
+    try:
+        opcion = int(input("Ingrese una opción:"))
+    except:
+        print("Error en al opción ingresada")
 
     if opcion < 1 or opcion > 6:
         print("Opción no válida")
@@ -26,7 +29,12 @@ while opcion != 6:
         input("Presione enter para continuar")
 
     else:
-        cantidad = int(input("Ingrese cantidad:"))
+        try:
+            cantidad = int(input("Ingrese cantidad:"))
+        except:
+            print("Error en la cantidad ingresada")
+            continue
+        
         if opcion == 1:
             total += cantidad * 1500
         elif opcion == 2:
