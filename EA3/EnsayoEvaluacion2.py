@@ -36,7 +36,7 @@ while opcion != 4:
     elif opcion == 1:
         print("Seleccionó la opción 1")
         try:
-            rut = int(input("Ingrese su rut"))
+            rut = int(input("Ingrese su rut: "))
 
             if rut < 4000000 or rut > 99999999:
                 raise ("El rut no está dentro del rango permitido")
@@ -93,7 +93,7 @@ while opcion != 4:
         print("Seleccionó la opción 2")
 
         try:
-            rut = int(input("Ingrese su rut"))
+            rut = int(input("Ingrese su rut: "))
 
             if rut < 4000000 or rut > 99999999:
                 raise ("El rut no está dentro del rango permitido")
@@ -117,7 +117,7 @@ while opcion != 4:
     elif opcion == 3:
         print("Seleccionó la opción 3")
         try:
-            rut = int(input("Ingrese su rut"))
+            rut = int(input("Ingrese su rut: "))
 
             if rut < 4000000 or rut > 99999999:
                 raise ("El rut no está dentro del rango permitido")
@@ -129,7 +129,7 @@ while opcion != 4:
         clienteEncontrado = []
         for cliente in clientes:
             if cliente[0] == rut:
-                clienteEncontrado
+                clienteEncontrado= cliente
                 break
         
         if len(clienteEncontrado) == 0:
