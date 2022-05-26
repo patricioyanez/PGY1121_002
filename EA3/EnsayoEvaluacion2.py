@@ -91,6 +91,29 @@ while opcion != 4:
 
     elif opcion == 2:
         print("Seleccionó la opción 2")
+
+        try:
+            rut = int(input("Ingrese su rut"))
+
+            if rut < 4000000 or rut > 99999999:
+                raise ("El rut no está dentro del rango permitido")
+        except:
+            print("El rut no es válido")
+            input("Presione enter para continuar.....")
+            continue
+
+        fueEncontrado = False
+        for cliente in clientes:
+            if cliente[0] == rut:
+                cliente.append('26-05-2022')
+                print("Cliente encontrado")
+                fueEncontrado = True
+                break
+        
+        if not fueEncontrado:
+            print("Cliente no encontrado")
+            input("Presione enter para continuar.....")
+
     elif opcion == 3:
         print("Seleccionó la opción 3")
 
