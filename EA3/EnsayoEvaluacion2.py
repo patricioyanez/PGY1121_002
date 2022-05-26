@@ -116,5 +116,34 @@ while opcion != 4:
 
     elif opcion == 3:
         print("Seleccionó la opción 3")
+        try:
+            rut = int(input("Ingrese su rut"))
 
+            if rut < 4000000 or rut > 99999999:
+                raise ("El rut no está dentro del rango permitido")
+        except:
+            print("El rut no es válido")
+            input("Presione enter para continuar.....")
+            continue
+
+        clienteEncontrado = []
+        for cliente in clientes:
+            if cliente[0] == rut:
+                clienteEncontrado
+                break
+        
+        if len(clienteEncontrado) == 0:
+            print("Cliente no fue encontrado")
+        else:
+            print("\n==== Datos del usuario encontrado ====")
+            print("Rut              :", clienteEncontrado[0])
+            print("Nombre           :", clienteEncontrado[1])
+            print("Dirección        :", clienteEncontrado[2])
+            print("Comuna           :", clienteEncontrado[3])
+            print("Correo           :", clienteEncontrado[4])
+            print("Edad             :", clienteEncontrado[5])
+            print("Genero           :", clienteEncontrado[6])
+            print("Celular          :", clienteEncontrado[7])
+            print("Tipo             :", clienteEncontrado[8])
+            print("Fecha Suscripción:", clienteEncontrado[10])
     input("Presione enter para continuar.....")
