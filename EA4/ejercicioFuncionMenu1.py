@@ -11,7 +11,7 @@ def dividir(num1, num2):
 
 opcion = 0
 listaDeOpciones = ["1", "2", "3", "4", "5"]
-while opcion != 5:
+while opcion != "5":
     print("====== Calculadora ======")
     print("1.- Sumar")
     print("2.- Restar")
