@@ -4,13 +4,39 @@
 import numpy as nu
 casillero = nu.array([  ["","",""],
                         ["","",""],
-                        ["","",""] ])
+                        ["","",""] ], dtype=object)
 
 # definir las funciones
 def arrendar(casillero):
-    pass
+    print("**** Arriendo de casillero ****")
+    print("Ingrese nivel del casillero")
+    print("Nivel 1: $10.000")
+    print("Nivel 2: $ 5.000")
+    print("Nivel 3: $ 2.000")
+
+    try:
+        nivel = int(input("Ingrese nivel del casillero: "))
+        fila = nivel - 1
+        mostrarCasillerosFila(casillero, fila)
+        nroCasillero = int(input("Ingrese el nro de casillero: "))
+        columna = nroCasillero - 1
+        nombre = input("Ingrese su nombre          : ")
+        casillero[fila, columna] = nombre.upper()
+#        print(casillero)
+    except:
+        print("Valor ingresado no es válido.")
+        input("Presione enter para continuar....")
+
+
 def mostrarCasillerosFila(casillero, fila):
-    pass
+    # muestra los casilleros disponibles en la fila enviada
+    nroCasillero = 1
+    print("Casilleros disponibles de la fila:", fila+1)
+    for columna in casillero[fila]:
+        if columna == "":
+            print("nro de casillero:", nroCasillero, "\n")
+        nroCasillero += 1
+
 def mostrarDisponible(casillero):
     pass
 def listarCliente(casillero):
