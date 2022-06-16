@@ -38,7 +38,24 @@ def mostrarCasillerosFila(casillero, fila):
         nroCasillero += 1
 
 def mostrarDisponible(casillero):
-    pass
+    print("*** Disponibilidad de los casilleros ***")
+    filas = ""
+    nroCasillero = 1
+    valor = ""
+
+    for fila in casillero:
+        for columna in fila:
+            if columna == "":
+                valor = str(nroCasillero)
+            else:
+                valor = "X"
+            filas += valor + " "
+            nroCasillero += 1
+        filas += "\n"
+    print(filas)
+    input("Presione enter para continuar....")
+
+
 def listarCliente(casillero):
     pass
 def mostrarGanancia(casillero):
